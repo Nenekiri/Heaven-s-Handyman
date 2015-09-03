@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\changelog.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\playerControls.cs">
     <Files>
-      <File FileName="Assets\changelog.cs" Line="21" Column="2" />
+      <File FileName="Assets\changelog.cs" Line="22" Column="2" />
+      <File FileName="Assets\playerControls.cs" Line="17" Column="55" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
