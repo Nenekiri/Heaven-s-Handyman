@@ -19,7 +19,9 @@ public class changelog : MonoBehaviour {
 
 	imported 2d Toolkit asset package
 
-	
+	started working on the movement script for the basic representation of the character
+
+
 
 	*/
 }
