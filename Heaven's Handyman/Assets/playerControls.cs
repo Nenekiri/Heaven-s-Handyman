@@ -76,7 +76,8 @@ public class playerControls : MonoBehaviour {
 			
 			rb.velocity = -moving * Time.deltaTime * 100; 
 			
-			
+
+			//Debug.Log(fallSpeed); 
 		}
 		
 		//much less effective way of dropping the character
