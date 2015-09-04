@@ -19,51 +19,77 @@ public class playerControls : MonoBehaviour {
 	}
 
 
-	
-	// Update is called once per frame
-	void Update () {
+	void FixedUpdate(){
 
 		//basic movement for the character
-
+		
 		//this method allows for movement both on the horizontal and vertical axis
 		//var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-
+		
 		//this method only allows horizontal movement
-		var move = new Vector3(Input.GetAxis("Horizontal"),0, 0);
-		transform.position += move * speed * Time.deltaTime;
-
-	
+		Vector2 move = new Vector2(Input.GetAxis("Horizontal"), 0);
+		//transform.position += move * speed * Time.deltaTime;
+		
+		float grav = rb.velocity.y - 0.25f; 
+		rb.velocity = move * speed * Time.deltaTime * 100;
+		
+		
+		
 		if(Input.GetButtonUp("Jump") == true){
-
+			
 			//rb.velocity = new Vector3 (0, 10, 0); 
-
-			var moveVertTemp = new Vector3(0, JumpSpeed, 0); 
-			transform.position += moveVertTemp * Time.deltaTime;
-
+			
+			//var moveVertTemp = new Vector3(0, JumpSpeed, 0); 
+			//transform.position += moveVertTemp * Time.deltaTime;
+			
+			grav = 9.5f; 
+			
+			
+			
 		} 
-
-
-
+		
+		rb.velocity = new Vector2(rb.velocity.x, grav); 
+		
+		
+		
 		//this method allows for jumping and holding down the jump key to ascend
-		var moveVert = new Vector3(0, Input.GetAxis("Jump"), 0); 
-			transform.position += moveVert * JumpSpeed * Time.deltaTime; 
+		//var moveVert = new Vector3(0, Input.GetAxis("Jump"), 0); 
+		//transform.position += moveVert * JumpSpeed * Time.deltaTime; 
 
+		if(Input.GetButtonDown("Jump") == true){
 
+			grav = 10.5f; 
 
-
-		//used for quickly dropping down
-
-		if(Input.GetAxis("Vertical") < 0){
-
-			var moving = new Vector3(0, fallSpeed, 0); 
-			transform.position -= moving * Time.deltaTime; 
 
 
 		}
-
+		
+		rb.velocity = new Vector2(rb.velocity.x, grav); 
+		
+		
+		//used for quickly dropping down
+		
+		if(Input.GetAxis("Vertical") < 0){
+			
+			var moving = new Vector3(0, fallSpeed, 0); 
+			//transform.position -= moving * Time.deltaTime; 
+			
+			rb.velocity = -moving * Time.deltaTime * 100; 
+			
+			
+		}
+		
 		//much less effective way of dropping the character
 		//var moveDown = new Vector3(0, Input.GetAxis("Vertical"), 0); 
 		//transform.position -= moveDown * fallSpeed * Time.deltaTime;  
+
+
+
+	}
+	// Update is called once per frame
+	void Update () {
+
+
 
 
 	
