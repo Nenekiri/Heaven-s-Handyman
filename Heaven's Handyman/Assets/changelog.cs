@@ -22,6 +22,20 @@ public class changelog : MonoBehaviour {
 	started working on the movement script for the basic representation of the character
 
 
+	9/13/15: 
+
+	changes made: 
+
+	finished the basic player controls
+	added a really nice follow camera
+	tested it out myself and am happy with how the test character controls
+	had other people test it out, they also seemed happy with the control scheme
+	started working on enemy concept art and importing them into the project
+	created prefab for the test character so I won't lose the values I set for the movement
+	basic enemy art completed for: Bimby the Bomb, Generic Flying Eye Bat, Floating Ram Skull, 
+	and Earth Snake. 
+
+
 
 	*/
 }
