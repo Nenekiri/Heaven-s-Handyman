@@ -96,4 +96,13 @@ public class playerControls : MonoBehaviour {
 	
 	}//end of update
 
+	void OnTriggerEnter2D(Collider2D other){
+
+		Debug.Log ("Hit"); 
+		if (other.tag == "Wall"){
+			//Destroy(this.gameObject); 
+			Application.LoadLevel(0); 
+		}
+	}
+
 }//end of class

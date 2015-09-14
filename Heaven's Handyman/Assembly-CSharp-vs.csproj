@@ -46,8 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\bimbytheBomb.cs" />
      <Compile Include="Assets\Scripts\followCam.cs" />
      <Compile Include="Assets\Scripts\playerControls.cs" />
+     <Compile Include="Assets\Scripts\wallOfFire.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCamera.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCameraAnchor.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCameraUtil.cs" />

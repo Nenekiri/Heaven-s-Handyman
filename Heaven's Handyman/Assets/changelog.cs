@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class changelog : MonoBehaviour {
@@ -34,6 +34,20 @@ public class changelog : MonoBehaviour {
 	created prefab for the test character so I won't lose the values I set for the movement
 	basic enemy art completed for: Bimby the Bomb, Generic Flying Eye Bat, Floating Ram Skull, 
 	and Earth Snake. 
+
+
+	9/14/15: 
+
+	changes made: 
+
+	added another basic enemy concept: Scary Mask
+	messed around with putting a circle collider on Bimby the Bomb to see how
+	it would look in game. 
+	started working on the wall of fire that is supposed to be chasing the player.'
+	basic chasing framework for the wall completed. 
+	added some logic onto Bimby the Bomb that allows him to kill the player on Collision.
+	
+	
 
 
 

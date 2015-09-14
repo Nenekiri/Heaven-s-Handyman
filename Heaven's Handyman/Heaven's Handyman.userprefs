@@ -2,7 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\changelog.cs">
     <Files>
-      <File FileName="Assets\changelog.cs" Line="42" Column="1" />
+      <File FileName="Assets\Scripts\bimbytheBomb.cs" Line="21" Column="65" />
+      <File FileName="Assets\changelog.cs" Line="56" Column="1" />
+      <File FileName="Assets\Scripts\wallOfFire.cs" Line="21" Column="32" />
+      <File FileName="Assets\Scripts\playerControls.cs" Line="12" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
