@@ -3,6 +3,8 @@ using System.Collections;
 
 public class playerControls : MonoBehaviour {
 
+	public Transform wall; 
+
 	public float speed = 1.0f;
 	public float JumpSpeed = 2.0f; 
 	public float fallSpeed = 2.5f; 
@@ -14,12 +16,22 @@ public class playerControls : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+
+
 		rb = GetComponent<Rigidbody2D>(); 
 	
 	}
 
 
 	void FixedUpdate(){
+
+		//checks for the position of the player in the y-axis and will "kill" the player 
+		//when he goes past the y-position of the wall of death. 
+		if (this.transform.position.y <= wall.transform.position.y){
+
+			Application.LoadLevel(0); 
+
+		}
 
 		//basic movement for the character
 		

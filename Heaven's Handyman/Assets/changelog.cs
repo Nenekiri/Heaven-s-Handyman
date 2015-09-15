@@ -46,7 +46,26 @@ public class changelog : MonoBehaviour {
 	started working on the wall of fire that is supposed to be chasing the player.'
 	basic chasing framework for the wall completed. 
 	added some logic onto Bimby the Bomb that allows him to kill the player on Collision.
+
+
+	learned about the headache that is working with unity's 2d collison system
 	
+	9/15/15: 
+	changes made:
+
+	started working on implementing the code for the other enemies
+
+	Floating Ram Skull will eventually shoot fireballs :done
+	Earth Snake will eventually burst out of the Earth when player gets near
+	Generic Flying Bat will fly from right to left across the screen. 
+	Scary Mask will fly from left to right across the screen. 
+
+	added a trail renderer to the player to see how it looked
+	added a code snippet that checks for the player's y-position 
+	and reloads the level if the player goes below the y-position of the moving wall. 
+	added beeping sound to Bimby the Bomb and a distance counter that tracks how
+	far he is away from the player and begins playing a beeping sound when the player is 
+	close enough and Bimby collides with an object. 
 	
 
 
