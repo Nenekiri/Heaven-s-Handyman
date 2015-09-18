@@ -29,7 +29,7 @@ public class playerControls : MonoBehaviour {
 		//when he goes past the y-position of the wall of death. 
 		if (this.transform.position.y <= wall.transform.position.y){
 
-			Application.LoadLevel(0); 
+			Application.LoadLevel("Test"); 
 
 		}
 

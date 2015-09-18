@@ -48,4 +48,11 @@ public class MainMenuUI : MonoBehaviour {
 		
 		
 	}
+
+	public void GTFO(){
+
+		Application.Quit (); 
+
+
+	}
 }
