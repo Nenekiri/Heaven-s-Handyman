@@ -66,6 +66,26 @@ public class changelog : MonoBehaviour {
 	added beeping sound to Bimby the Bomb and a distance counter that tracks how
 	far he is away from the player and begins playing a beeping sound when the player is 
 	close enough and Bimby collides with an object. 
+
+	9/17/15: 
+
+	Bad news and good news
+
+	Bad news: computer's hard drive is probably fried, might have to get a new hard drive or even a new computer. 
+	Good News: I backed the project up into a git repository so I can still work on it from the lab computers at school
+
+	Well now that I have that off my chest I can get back to working on this in some capacity
+
+	changes made:
+	made a vow to back more things up more frequently
+	downloaded the Angels and Demons Free Sound Pack from the Unity Asset Store, going to play around with these tracks for music during the levels. 
+	
+	added a really cool music randomization script that randomly chooses music based on whether they want Heaven or Hell type musical tracks
+
+	added a basic pause menu that pauses with the press of an escape key and also the start button on a controller. 
+
+	
+
 	
 
 
