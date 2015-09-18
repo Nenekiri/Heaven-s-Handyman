@@ -113,7 +113,7 @@ public class playerControls : MonoBehaviour {
 		Debug.Log ("Hit"); 
 		if (other.tag == "Wall"){
 			//Destroy(this.gameObject); 
-			Application.LoadLevel(0); 
+			Application.LoadLevel("Test"); 
 		}
 	}
 

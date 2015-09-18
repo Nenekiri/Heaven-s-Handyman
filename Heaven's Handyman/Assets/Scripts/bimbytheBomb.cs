@@ -51,7 +51,7 @@ public class bimbytheBomb : MonoBehaviour {
 	void OnCollisionStay2D(Collision2D coli){
 		Debug.Log ("Hit Bomb2");  
 		if(coli.gameObject.tag == "Player"){
-			Application.LoadLevel(0); 
+			Application.LoadLevel("Test"); 
 		}
 	}
 

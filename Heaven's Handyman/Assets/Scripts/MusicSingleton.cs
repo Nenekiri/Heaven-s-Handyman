@@ -23,12 +23,12 @@ public class MusicSingleton : MonoBehaviour {
 
 	public AudioSource s; 
 
-	public bool heaven = true; 
-	public bool hell = false; 
+	 
 
 
 	public AudioClip[] clip;
-	public AudioClip[] hclip; 
+	public AudioClip[] hclip;
+	 
 
 
 
@@ -37,7 +37,9 @@ public class MusicSingleton : MonoBehaviour {
 	void Start(){
 
 
-		RandomMusic (); 
+				
+		RandomMusic ();
+				
 
 
 	}
@@ -45,25 +47,42 @@ public class MusicSingleton : MonoBehaviour {
 	//method for randomising music based on the player's choices
 
 	void RandomMusic(){
-
-		if (heaven == true) {
-
-			s = GetComponent<AudioSource> ();
+			
 		
+			if (Globals.heaven == true) {
+				
+			s = GetComponent<AudioSource> ();
+				
 			s.clip = (clip [Random.Range (0, clip.Length * 7) % clip.Length]); 
-		
+				
 			s.Play ();
-
-		} else if (hell == true) {
-
+				
+		} else if (Globals.hell == true) {
+				
 			s = GetComponent<AudioSource> ();
-			
+				
 			s.clip = (hclip [Random.Range (0, hclip.Length * 7) % hclip.Length]); 
-			
+				
 			s.Play ();
+				
+		} 
+
+			
+
+
+	}//end of RandomMusic
+
+
+	void Update(){
+
+		//as long as I put Menu in the name of the level this should fix the problem for those menus as well
+		if(Application.loadedLevelName.Contains("Menu")){
+			s.enabled = false; }
+		else{
+			s.enabled = true; 
+
 
 		}
-
 
 
 	}
@@ -72,4 +91,4 @@ public class MusicSingleton : MonoBehaviour {
 
 
 
-}
+}//end of class

@@ -4,9 +4,14 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 
-	public GameObject pausePanel; 
+	public GameObject pausePanel;
 
 	public bool isPaused; 
+
+
+
+
+	
 
 	// Use this for initialization
 	void Start () {
@@ -58,5 +63,20 @@ public class UIManager : MonoBehaviour {
 
 
 	}//end of switchPause method
+
+	public void ChangeScene(string scene){
+
+		Application.LoadLevel (scene); 
+
+
+
+
+	}
+
+
+
+
+
+
 
 }

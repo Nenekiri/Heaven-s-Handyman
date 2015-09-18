@@ -84,6 +84,20 @@ public class changelog : MonoBehaviour {
 
 	added a basic pause menu that pauses with the press of an escape key and also the start button on a controller. 
 
+	9/18/15: 
+
+	got a bunch of new ideas and a full head of steam so let's get some shit done!
+
+	added a changescene function into the UIManager class so that I can change between scenes in my game easily using the UI
+
+	added a main menu from which you can start the game
+
+	added some toggle controls for toggling the music to be played on the main level
+
+	added some tracks for the main menu
+
+	made the first .exe file for the game. 
+
 	
 
 	
