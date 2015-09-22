@@ -98,6 +98,33 @@ public class changelog : MonoBehaviour {
 
 	made the first .exe file for the game. 
 
+
+    9/21/15: 
+
+    got a new computer and am trying to get everything set back up and working on it. managed to port over my capstone project pretty easily. Should be smooth sailing from here on out. 
+    
+    changes made: 
+
+    
+    9/22/15:
+    yeah, jack shit got done yesterday.
+    
+    changes made: 
+    
+    added the two breaker switches into the game. need to add the code and scripts that control how they function. 
+    
+    decided to work on enemy ai instead. 
+    
+    generic flying bat will now randomly spawn in one direction and then begin traveling in that direction (either left or right)
+    
+    scary mask now floats around and closes the gap between player and itself
+    
+     
+
+
+
+
+
 	
 
 	
