@@ -38,7 +38,18 @@ public class floatingRamSkull : MonoBehaviour {
 		}
 		//StartCoroutine(Wait()); 
 
-	}
+	}//end of fixed update
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+
+        Debug.Log("Hit Player");
+        if (col.gameObject.tag == "Player")
+        {
+
+            Application.LoadLevel("Test");
+        }
+    }//end of OnTriggerEnter2D
 
 }//end of class definition
 

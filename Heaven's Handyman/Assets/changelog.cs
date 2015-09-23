@@ -119,6 +119,12 @@ public class changelog : MonoBehaviour {
     
     scary mask now floats around and closes the gap between player and itself
     
+    9/23/15:
+    
+    changes made: 
+    
+    added a box collider to the floating ram skull enemy which kills the player upon contact. 
+    
      
 
 
