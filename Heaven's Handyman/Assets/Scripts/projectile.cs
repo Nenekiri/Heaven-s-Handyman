@@ -23,8 +23,10 @@ public class projectile : MonoBehaviour {
 		
 		Debug.Log ("Hit Player"); 
 		if (col.gameObject.tag == "Player"){
-			//Destroy(this.gameObject); 
-			Application.LoadLevel("Test");  
-		}
+
+            //Application.LoadLevel("Test");
+
+            Globals.death = true;
+        }
 	}
 }//end of projectile class

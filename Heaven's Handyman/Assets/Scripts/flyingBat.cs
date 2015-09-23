@@ -63,8 +63,10 @@ public class flyingBat : MonoBehaviour {
         Debug.Log("Hit Player");
         if (col.gameObject.tag == "Player")
         {
-             
-            Application.LoadLevel("Test");
+
+            //Application.LoadLevel("Test");
+
+            Globals.death = true;
         }
     }
 }

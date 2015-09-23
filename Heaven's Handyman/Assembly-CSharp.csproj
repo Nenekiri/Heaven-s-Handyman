@@ -50,6 +50,8 @@
      <Compile Include="Assets\Scripts\MainMenuMusic.cs" />
      <Compile Include="Assets\Scripts\MainMenuUI.cs" />
      <Compile Include="Assets\Scripts\MusicSingleton.cs" />
+     <Compile Include="Assets\Scripts\ScoreManager.cs" />
+     <Compile Include="Assets\Scripts\ScoreView.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\Scripts\bimbytheBomb.cs" />
      <Compile Include="Assets\Scripts\floatingRamSkull.cs" />
@@ -57,6 +59,7 @@
      <Compile Include="Assets\Scripts\followCam.cs" />
      <Compile Include="Assets\Scripts\playerControls.cs" />
      <Compile Include="Assets\Scripts\projectile.cs" />
+     <Compile Include="Assets\Scripts\scaryMask.cs" />
      <Compile Include="Assets\Scripts\wallOfFire.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCamera.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCameraAnchor.cs" />
@@ -139,7 +142,6 @@
      <Compile Include="Assets\TK2DROOT\tk2d_demo\tk2dDemoReloadController.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d_demo\tk2dDemoRuntimeSpriteController.cs" />
      <Compile Include="Assets\changelog.cs" />
-     <Compile Include="Assets\scaryMask.cs" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\LitSolidVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2d\Goodies\TexturePacker\Exporter\2dtoolkit\exporter.xml" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\SolidVertexColor.shader" />

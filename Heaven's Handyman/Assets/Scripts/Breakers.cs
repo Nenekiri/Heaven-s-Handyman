@@ -43,7 +43,7 @@ public class Breakers : MonoBehaviour {
 
         Debug.Log(Globals.score);
 
-        buttonPresses = 0; 
+        //buttonPresses = 0; 
 
         //timer = 0; 
 
@@ -61,7 +61,7 @@ public class Breakers : MonoBehaviour {
                 if (Input.GetButtonUp("Fire1"))
                 {
                 buttonPresses++;
-                if (buttonPresses >= 7) {
+                if (buttonPresses == 7) {
 
                     this.GetComponent<SpriteRenderer>().sprite = breakerOn;
                     checkScore();

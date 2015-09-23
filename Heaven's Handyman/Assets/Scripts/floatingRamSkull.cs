@@ -47,7 +47,9 @@ public class floatingRamSkull : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
 
-            Application.LoadLevel("Test");
+            //Application.LoadLevel("Test");
+
+            Globals.death = true;
         }
     }//end of OnTriggerEnter2D
 

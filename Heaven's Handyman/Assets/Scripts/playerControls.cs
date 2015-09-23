@@ -11,8 +11,9 @@ public class playerControls : MonoBehaviour {
 
 	public float ascentTime = 0.0f; 
 
-	public Rigidbody2D rb; 
+	public Rigidbody2D rb;
 
+    
 	// Use this for initialization
 	void Start () {
 
@@ -29,7 +30,9 @@ public class playerControls : MonoBehaviour {
 		//when he goes past the y-position of the wall of death. 
 		if (this.transform.position.y <= wall.transform.position.y){
 
-			Application.LoadLevel("Test"); 
+            //Application.LoadLevel("Test"); 
+
+            Globals.death = true; 
 
 		}
 
@@ -112,8 +115,11 @@ public class playerControls : MonoBehaviour {
 
 		Debug.Log ("Hit"); 
 		if (other.tag == "Wall"){
-			//Destroy(this.gameObject); 
-			Application.LoadLevel("Test"); 
+
+            //Application.LoadLevel("Test");
+
+            Globals.death = true;     
+         
 		}
 	}
 

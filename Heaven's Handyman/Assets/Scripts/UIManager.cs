@@ -6,7 +6,17 @@ public class UIManager : MonoBehaviour {
 
 	public GameObject pausePanel;
 
-	public bool isPaused; 
+	public bool isPaused;
+
+    public GameObject DeathPanel;
+
+    public GameObject score;
+
+    int timer = 0; 
+
+   
+    
+    
 
 
 
@@ -16,9 +26,13 @@ public class UIManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		isPaused = false; 
-	
-	}
+		isPaused = false;
+
+        //sets the Death Panel to be false on start
+        DeathPanel.SetActive(false);
+
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -31,6 +45,12 @@ public class UIManager : MonoBehaviour {
 		if(Input.GetButtonDown ("Cancel")){
 			SwitchPause(); 
 		}
+
+        if (Globals.death == true) {
+
+            DeathScreen(); 
+
+        }
 
 	}
 
@@ -66,12 +86,77 @@ public class UIManager : MonoBehaviour {
 
 	public void ChangeScene(string scene){
 
-		Application.LoadLevel (scene); 
+		Application.LoadLevel (scene);
 
+        //forces the value for player death to be false when transitioning between scenes. 
+        Globals.death = false;
 
-
+        //forces the score to reset when switching between scenes
+        Globals.score = 0; 
 
 	}
+
+    public void DeathScreen() {
+
+        //sets the score to be false
+        score.SetActive(false); 
+
+        //sets the death panel on
+        DeathPanel.SetActive(true);
+
+
+        if (Globals.death == true)
+        {
+            timer++; 
+            if (timer >= 60)
+            {
+                //pauses the game scene while they are viewing their results
+                Time.timeScale = 0.0f;
+                 
+            }
+        }
+        
+
+       
+    }
+
+    //allows me to assign this function to a button as a retry/reload button for the level. 
+    public void Reload() {
+
+        //loads the current level and resets the death variable
+        Application.LoadLevel(Application.loadedLevel);
+        Globals.death = false;
+
+        //resets the panel components for the reloaded scene
+        DeathPanel.SetActive(false);
+        score.SetActive(true);
+         
+
+        //unpauses the game
+        Time.timeScale = 1.0f;
+
+        //resets the variable for the score
+        Globals.score = 0;
+
+        timer = 0; 
+
+
+    }//end of reload method
+
+    //attempt to make setactive easier, ehh not the best method
+    void FlipActivation(GameObject g) {
+
+        if (g.activeSelf == true)
+        {
+
+            g.SetActive(false);
+        }
+        else if (g.activeSelf == false) {
+
+            g.SetActive(true); 
+        }
+
+    }
 
 
 

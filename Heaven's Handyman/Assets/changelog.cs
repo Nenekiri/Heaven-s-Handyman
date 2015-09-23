@@ -125,6 +125,24 @@ public class changelog : MonoBehaviour {
     
     added a box collider to the floating ram skull enemy which kills the player upon contact. 
     
+    added the logic to the breaker class that defines how many times you have to press a button near it to get it to switch on and give you points
+    
+    successfully switch the off sprite to the on sprite when the conditions have been met. 
+
+    found a glitch that allows you to farm points from one switch. 
+    
+    fixed the glitch the allows you to farm points from one switch. 
+
+    added a reload function into the UIManager class
+
+    created a ScoreManager class to dynamically display the score for the player on the screen
+
+    tried to desperately get the score to appear on the death screen to no avail, will have to ask about it tommorow. 
+
+    changed logic on enemies to have it take you to the kill screen when they touch you. 
+
+    fixed the problems with the kill screens and now it functions like it is supposed to. 
+    
      
 
 
