@@ -12,6 +12,8 @@ public class UIManager : MonoBehaviour {
 
     public GameObject score;
 
+    public GameObject player; 
+
     int timer = 0; 
 
    
@@ -30,6 +32,8 @@ public class UIManager : MonoBehaviour {
 
         //sets the Death Panel to be false on start
         DeathPanel.SetActive(false);
+
+        player.SetActive(true); 
 
         
     }
@@ -107,9 +111,12 @@ public class UIManager : MonoBehaviour {
 
         if (Globals.death == true)
         {
+            //disables the player object so that you can't see it anymore
+            player.SetActive(false);
+
             timer++; 
             if (timer >= 60)
-            {
+            { 
                 //pauses the game scene while they are viewing their results
                 Time.timeScale = 0.0f;
                  

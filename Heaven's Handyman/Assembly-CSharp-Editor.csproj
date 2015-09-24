@@ -161,6 +161,9 @@
      <None Include="Assets\Angels and Demons (free)\readme.txt" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\AdditiveVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2d_demo\democameradata\source\democamerafont.fnt" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -176,11 +179,32 @@
  <Reference Include="UnityEditor.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
  <Reference Include="tk2dExternal">
  <HintPath>C:/Users/mmiel/Heaven-s-Handyman/Heaven's Handyman/Assets/TK2DROOT/tk2d/Editor/tk2dExternal.dll</HintPath>
  </Reference>
  <Reference Include="tk2dSkin">
  <HintPath>C:/Users/mmiel/Heaven-s-Handyman/Heaven's Handyman/Assets/TK2DROOT/tk2d/Editor/tk2dSkin.dll</HintPath>
+ </Reference>
+ <Reference Include="MySql.Data.CF">
+ <HintPath>C:/Users/mmiel/Heaven-s-Handyman/Heaven's Handyman/Assets/v2.0/MySql.Data.CF.dll</HintPath>
+ </Reference>
+ <Reference Include="MySql.Data">
+ <HintPath>C:/Users/mmiel/Heaven-s-Handyman/Heaven's Handyman/Assets/v2.0/MySql.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="MySql.Data.Entity">
+ <HintPath>C:/Users/mmiel/Heaven-s-Handyman/Heaven's Handyman/Assets/v2.0/MySql.Data.Entity.dll</HintPath>
+ </Reference>
+ <Reference Include="MySql.Fabric.Plugin">
+ <HintPath>C:/Users/mmiel/Heaven-s-Handyman/Heaven's Handyman/Assets/v2.0/MySql.Fabric.Plugin.dll</HintPath>
+ </Reference>
+ <Reference Include="MySql.Web">
+ <HintPath>C:/Users/mmiel/Heaven-s-Handyman/Heaven's Handyman/Assets/v2.0/MySql.Web.dll</HintPath>
+ </Reference>
+ <Reference Include="MySql.Web.v20">
+ <HintPath>C:/Users/mmiel/Heaven-s-Handyman/Heaven's Handyman/Assets/v2.0/MySql.Web.v20.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -221,10 +245,6 @@
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{1842051D-21DF-FF02-9A81-7B2D1F2A7953}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

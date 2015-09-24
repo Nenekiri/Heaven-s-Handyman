@@ -142,6 +142,18 @@ public class changelog : MonoBehaviour {
     changed logic on enemies to have it take you to the kill screen when they touch you. 
 
     fixed the problems with the kill screens and now it functions like it is supposed to. 
+
+    9/24/15: 
+
+    changes made: 
+
+    fixed it so that the player's gameobject turns itself off when they collide with something, then the game pauses.
+    
+    worked on getting the database component of my project working
+    
+     
+
+
     
      
 
