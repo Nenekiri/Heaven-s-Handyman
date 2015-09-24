@@ -151,6 +151,14 @@ public class changelog : MonoBehaviour {
     
     worked on getting the database component of my project working
     
+    kept getting a bunch of errors for no apparent reason, will have to ask Coty about it when I see him next. 
+    
+    added a test sprite for the chasing lava and also for the player character finally!
+    
+    changed the collider on the player object to a box collider, need to test extensively to see if this will change game feel. 
+    
+    Had to delete the v2.0 folder I imported in order for unity to not crash on me, will definetely have to look into this further. 
+    
      
 
 

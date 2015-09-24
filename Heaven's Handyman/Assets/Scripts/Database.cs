@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 using System;
 
 public class Database : MonoBehaviour
@@ -9,17 +9,17 @@ public class Database : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        MySql.Data.MySqlClient.MySqlConnection conn;
-        string myConnectionString;
+        //MySql.Data.MySqlClient.MySqlConnection conn;
+       // string myConnectionString;
 
-        myConnectionString = "server=50.62.209.198;uid=Nenekiri_351;" +
-            "pwd=Database351;database=Score;";
+        //myConnectionString = "server=50.62.209.198;uid=Nenekiri_351;" +
+           // "pwd=Database351;database=Score;";
 
         try
         {
-            conn = new MySql.Data.MySqlClient.MySqlConnection();
+            /*conn = new MySql.Data.MySqlClient.MySqlConnection();
             conn.ConnectionString = myConnectionString;
-            conn.Open();
+            conn.Open();*/
         }
         catch (Exception ex)
         {
