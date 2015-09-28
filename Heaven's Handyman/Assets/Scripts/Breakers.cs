@@ -1,14 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI; 
 
 public class Breakers : MonoBehaviour {
 
     public Sprite breakerOff;
     public Sprite breakerOn;
 
-    public int buttonPresses = 0; 
+    public int buttonPresses = 0;
+    public bool interact = false; 
 
     //public int timer = 0; 
+
+    public GameObject breakerDisplay; 
 
    
 
@@ -18,6 +22,8 @@ public class Breakers : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
+        breakerDisplay = GameObject.Find("Interact");
+        breakerDisplay.SetActive(false); 
     }
 	
 	// Update is called once per frame
@@ -43,6 +49,9 @@ public class Breakers : MonoBehaviour {
 
         Debug.Log(Globals.score);
 
+        //gets rid of the display when the switch is flipped
+        breakerDisplay.SetActive(false);
+
         //buttonPresses = 0; 
 
         //timer = 0; 
@@ -55,9 +64,16 @@ public class Breakers : MonoBehaviour {
         Debug.Log("Hit Breaker");
         if (coli.gameObject.tag == "Player")
         {
+            if (interact == false)
+            {
+                //display a message over the breaker object that signals the player needs to interact with it
+                breakerDisplay.SetActive(true);
+            }
+           
+
 
                 //changed it to a type of quick time event that checks for the amount of button presses that player has done while next to the button and if the limit is 
-                //reached or exceeded then run the functions that switch the sprite and add the score. 
+                //reached then run the functions that switch the sprite and add the score. 
                 if (Input.GetButtonUp("Fire1"))
                 {
                 buttonPresses++;
@@ -66,14 +82,28 @@ public class Breakers : MonoBehaviour {
                     this.GetComponent<SpriteRenderer>().sprite = breakerOn;
                     checkScore();
 
+                    interact = true; 
+
+                    
+
                 }//end of buttonPresses check
 
                 }//end of check for button press 
 
 
-        }//end fo check for player collision
+        }//end of check for player collision
 
     }//end of collision check
+
+    //check for the player leaving the breaker switch
+    void OnCollisionExit2D(Collision2D coli) {
+
+        if (coli.gameObject.tag == "Player") {
+
+            breakerDisplay.SetActive(false); 
+        }
+
+    }//end of OnCollisionExit2D
 
 
 

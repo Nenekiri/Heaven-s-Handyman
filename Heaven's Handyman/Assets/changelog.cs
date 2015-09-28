@@ -159,6 +159,12 @@ public class changelog : MonoBehaviour {
     
     Had to delete the v2.0 folder I imported in order for unity to not crash on me, will definetely have to look into this further. 
     
+    9/28/15: 
+    
+    changes made: 
+    
+    made a text box that will pop up when the player collides with the breaker switch. Goes away when the player pushes the interact button enough times
+    
      
 
 
