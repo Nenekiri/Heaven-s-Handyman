@@ -165,7 +165,30 @@ public class changelog : MonoBehaviour {
     
     made a text box that will pop up when the player collides with the breaker switch. Goes away when the player pushes the interact button enough times
     
-     
+    9/29/15:
+    
+    changes made: 
+    
+    started working on planning out the procedural generation component, asked Justin Barnyak for help in clearing up a lot of my conceptual issues with the topic .
+    
+    ported his psuedocode into the project will have to look at translating to actual code at a later time. 
+    
+    10/4/15:
+    
+    no visible changes made, however the updates I have are:
+
+    Assembly is a horrible programming language and caused a bit of a delay in working on this project. I hope to remedy this by tommorow and work more closely
+    on this project for this upcoming week. 
+    
+    found a tutorial that goes over different approaches to slowly scrolling a background image in the background. Hopefully will have enough time to watch it tommorow and 
+    figure out how to set up background scrolling finally. 
+    
+    found a couple tutorials on displaying a loading screen. For some reason it takes a long time to load up one of my test levels and I believe the loading screen will at least
+    make it known to the player that something is happening in the background. Will also look at that tommorow. 
+    
+    need to start messing around with procedural generation. I want to have at least a basic system in place for the midterm status report that is coming up very soon. 
+    
+      
 
 
     
