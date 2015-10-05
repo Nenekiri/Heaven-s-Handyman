@@ -188,6 +188,17 @@ public class changelog : MonoBehaviour {
     
     need to start messing around with procedural generation. I want to have at least a basic system in place for the midterm status report that is coming up very soon. 
     
+    10/5/15:
+    
+    changes made: 
+    
+    imported a test background for the parallax scrolling effect I am going after for the game. The idea is that the scrolling is dependent on player movement, 
+    which is why I attached a script that will move based on the player's relation to the camera. 
+    
+    made the BaseParallax script to scroll the test background and tested out its functionality. 
+    
+    fixed the moving wall of lava so that the box collider was the appropriate shape and size. 
+    
       
 
 
