@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic; 
+using System.Collections.Generic;
 
 public class LevelManager : MonoBehaviour {
 
@@ -8,47 +8,62 @@ public class LevelManager : MonoBehaviour {
 
     //setting up all the variables 
 
-    public GameObject[] pieces;
+    public GameObject[] pieces; //array to hold the public gameobjects
 
-    public int maxSize = 5;
+    public int maxSize = 5; //maxsize that can be in the list
 
-    List<GameObject> links;
+    List<GameObject> links = new List<GameObject>(); //the list itself
 
-    public float cutOff = 30.0f;
+    public float cutOff = 30.0f; //cutoff limit
 
-    public Vector3 lastPlaced = Vector3.zero;  
+    public Vector3 lastPlaced = Vector3.zero;  //vector to use for keeping track of the last placed gameobject
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start() {
 
-        if (links.Count < maxSize) {
+    }
+
+    // Update is called once per frame
+    void Update() {
+
+        //checks for the size of the list called links and makes sure it is not greater than maxSize
+        if (links.Count < maxSize)
+        {
 
             //spawn a new object
-            //pieces[Random.Range(0, 7)]; 
+            GameObject section = (GameObject)Instantiate(pieces[Random.Range(0, 7)], lastPlaced, transform.rotation);
 
-            /*for(pieces){
-                
-                if(pieces = false){
-                
-                remove from the list
-                }    
-                else{
-                
-                    for(i = pieces.Count){
-                            
-                            Vector3.Length(pieces[].transform.position.y) += transform.position); 
-                        }
-                    }
-
-            }*/
+            //add the object to the list
+            links.Add(section);
+        }
 
 
-        }//end of check for how many prefabs are currently in the scene
-	
-	}
-}
+        //loop for cleanup, I think
+        foreach (GameObject piece in links)
+        {
+
+            if (piece == false)
+            {
+
+                //remove from the list
+
+                links.Remove(piece);
+
+            } //end of if statement   
+            else
+            {
+
+                for (int i = links.Count; i < links.Count; i++)
+                {
+
+                    //lastPlaced = Vector3.Length(pieces[i].transform.position.y) += transform.position;
+
+            }//end of for loop
+        }//end of else
+
+    }//end of cleanup loop
+
+
+}//end of update
+
+}//end of class

@@ -199,7 +199,10 @@ public class changelog : MonoBehaviour {
     
     fixed the moving wall of lava so that the box collider was the appropriate shape and size. 
     
-      
+    tried to work on procedural generation, hit a wall and couldn't figure something out. Will come back to it tommorow. 
+    
+    worked on research portion of project and began to document the articles and blog posts I have been reading on the subjects of
+    procedural generation with prefabs in unity and animating 2d sprites   
 
 
     
