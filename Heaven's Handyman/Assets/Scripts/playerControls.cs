@@ -26,6 +26,9 @@ public class playerControls : MonoBehaviour {
 
 	void FixedUpdate(){
 
+        //updates the position of the player
+        Globals.distanceTraveledX = transform.localPosition.x;
+        Globals.distanceTraveledY = transform.localPosition.y; 
 		//checks for the position of the player in the y-axis and will "kill" the player 
 		//when he goes past the y-position of the wall of death. 
 		if (this.transform.position.y <= wall.transform.position.y){

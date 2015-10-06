@@ -202,7 +202,21 @@ public class changelog : MonoBehaviour {
     tried to work on procedural generation, hit a wall and couldn't figure something out. Will come back to it tommorow. 
     
     worked on research portion of project and began to document the articles and blog posts I have been reading on the subjects of
-    procedural generation with prefabs in unity and animating 2d sprites   
+    procedural generation with prefabs in unity and animating 2d sprites  
+    
+    10/6/15:
+    
+    changes made: 
+    
+    found a script that should provide a solid jumping off point in determining the rest of the procedural generation program. 
+    
+    modified script to only generate platforms on the y-axis as the player ascends
+    
+    fixed problem of player character being able to cling to walls, added a 2d physic material that sets his friction to 0. 
+    
+    made it so that the new Platform Manager script will spawn platforms in a specific range for both x and y values.
+    
+    added the prefab array so that the script will randomly generate a selected prefab when making the platforms. 
 
 
     
