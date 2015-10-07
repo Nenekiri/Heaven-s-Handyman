@@ -82,4 +82,4 @@ public class PlatformManager : MonoBehaviour {
 
 
     }
-}
+}//end of class

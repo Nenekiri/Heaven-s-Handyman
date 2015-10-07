@@ -218,6 +218,12 @@ public class changelog : MonoBehaviour {
     
     added the prefab array so that the script will randomly generate a selected prefab when making the platforms. 
 
+    10/7/15:
+
+    changes made: 
+
+
+
 
     
      
