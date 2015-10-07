@@ -22,8 +22,8 @@ public class Breakers : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
-        breakerDisplay = GameObject.Find("Interact");
-        breakerDisplay.SetActive(false); 
+        //breakerDisplay = GameObject.Find("Interact");
+        //breakerDisplay.SetActive(false); 
     }
 	
 	// Update is called once per frame
@@ -50,7 +50,7 @@ public class Breakers : MonoBehaviour {
         Debug.Log(Globals.score);
 
         //gets rid of the display when the switch is flipped
-        breakerDisplay.SetActive(false);
+        //breakerDisplay.SetActive(false);
 
         //buttonPresses = 0; 
 
@@ -67,7 +67,7 @@ public class Breakers : MonoBehaviour {
             if (interact == false)
             {
                 //display a message over the breaker object that signals the player needs to interact with it
-                breakerDisplay.SetActive(true);
+                //breakerDisplay.SetActive(true);
             }
            
 
@@ -77,7 +77,7 @@ public class Breakers : MonoBehaviour {
                 if (Input.GetButtonUp("Fire1"))
                 {
                 buttonPresses++;
-                if (buttonPresses == 7) {
+                if (buttonPresses == 5) {
 
                     this.GetComponent<SpriteRenderer>().sprite = breakerOn;
                     checkScore();
@@ -100,7 +100,7 @@ public class Breakers : MonoBehaviour {
 
         if (coli.gameObject.tag == "Player") {
 
-            breakerDisplay.SetActive(false); 
+            //breakerDisplay.SetActive(false); 
         }
 
     }//end of OnCollisionExit2D
