@@ -222,6 +222,24 @@ public class changelog : MonoBehaviour {
 
     changes made: 
 
+    I honestly can't remember, I did make some progress though. 
+
+    10/9/15: 
+
+    changes made: 
+
+    retooled the platform and enemy generation so that is is a little more fair and varied. 
+
+    fixed the game so that the barriers on the left and right of the play area will refresh as the player moves upward 
+
+    enlarged the background for now until I find a way to make sure that it can not only follow the player but also look as though the background is affected by parallax scrolling
+
+    Added a sign post that tells the player to continously move upwards. 
+
+    made a new build for the game. build number: 1.06
+
+    Yay progress! Going to show it off to people at the showcase tonight and get some more opinions on it. 
+
 
 
 

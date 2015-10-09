@@ -53,6 +53,12 @@ public class PlatformManager : MonoBehaviour {
         position.y += scale.y * 0.5f;
 
         Transform o = objectQueue.Dequeue();
+        Breakers B = o.gameObject.GetComponentInChildren<Breakers>();
+
+        if (B) {
+            B.Reset(); 
+        } 
+
         o.localScale = scale;
         o.localPosition = position;
         objectQueue.Enqueue(o);

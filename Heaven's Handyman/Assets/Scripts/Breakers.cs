@@ -8,7 +8,8 @@ public class Breakers : MonoBehaviour {
     public Sprite breakerOn;
 
     public int buttonPresses = 0;
-    public bool interact = false; 
+    public bool interact = false;
+     
 
     //public int timer = 0; 
 
@@ -18,12 +19,20 @@ public class Breakers : MonoBehaviour {
 
     public Rigidbody2D rb;
 
+    void Awake() {
+
+        //breakerDisplay = GameObject.Find("Interact");
+        //breakerDisplay.SetActive(false); 
+
+    }
+
 
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
-        //breakerDisplay = GameObject.Find("Interact");
-        //breakerDisplay.SetActive(false); 
+        interact = false;
+       
+        
     }
 	
 	// Update is called once per frame
@@ -44,8 +53,10 @@ public class Breakers : MonoBehaviour {
     }//end of fixed update
 
     void checkScore() {
-
-        Globals.score += 100;
+        if (interact == false)
+        {
+            Globals.score += 100;
+        }
 
         Debug.Log(Globals.score);
 
@@ -77,7 +88,7 @@ public class Breakers : MonoBehaviour {
                 if (Input.GetButtonUp("Fire1"))
                 {
                 buttonPresses++;
-                if (buttonPresses == 5) {
+                if (buttonPresses == 6) {
 
                     this.GetComponent<SpriteRenderer>().sprite = breakerOn;
                     checkScore();
@@ -104,6 +115,14 @@ public class Breakers : MonoBehaviour {
         }
 
     }//end of OnCollisionExit2D
+
+    public void Reset() {
+        
+        interact = false;
+        buttonPresses = 0;
+        this.GetComponent<SpriteRenderer>().sprite = breakerOff;
+
+    }
 
 
 

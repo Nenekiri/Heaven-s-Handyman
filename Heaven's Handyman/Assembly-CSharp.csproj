@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\MainMenuMusic.cs" />
      <Compile Include="Assets\Scripts\MainMenuUI.cs" />
      <Compile Include="Assets\Scripts\MusicSingleton.cs" />
+     <Compile Include="Assets\Scripts\NewDatabase.cs" />
      <Compile Include="Assets\Scripts\PlatformManager.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\ScoreView.cs" />

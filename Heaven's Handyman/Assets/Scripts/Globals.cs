@@ -7,6 +7,8 @@ public class Globals : MonoBehaviour {
 	public static bool hell = false;
     public static int score = 0;
 
+    public static int highscore = 0; 
+
     public static bool death = false;
 
     public static float distanceTraveledX;
