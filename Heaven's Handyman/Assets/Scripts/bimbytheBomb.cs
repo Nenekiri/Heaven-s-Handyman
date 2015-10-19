@@ -8,17 +8,20 @@ public class bimbytheBomb : MonoBehaviour {
 	public AudioClip beep; 
 
 	public float distance; 
-	public GameObject target; 
+	public GameObject target;
+
+    private tk2dSpriteAnimator anim;
 
 
 
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		audios = GetComponent<AudioSource>();
         target = GameObject.Find("test_player_2");
+        anim = GetComponent<tk2dSpriteAnimator>(); 
     }
 	
 	// Update is called once per frame
@@ -52,11 +55,15 @@ public class bimbytheBomb : MonoBehaviour {
 	void OnCollisionStay2D(Collision2D coli){
 		Debug.Log ("Hit Bomb2");  
 		if(coli.gameObject.tag == "Player"){
-            //Application.LoadLevel("Test");
 
+            //on collison with the player, play the explosion animation and set the death variable to be true. 
+            rb.isKinematic = true;  
+            anim.Play("BimbytheBomb_explosion");
             Globals.death = true;
         }
 	}
+
+  
 
 	//this method works as long as I have another seperate collider that is set 
 	//to the same position and set to isTrigger

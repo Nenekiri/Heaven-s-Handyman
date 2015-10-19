@@ -3,15 +3,21 @@ using System.Collections;
 
 public class flyingBat : MonoBehaviour {
 
-    public Sprite facingLeft;
-    public Sprite facingRight;
+    //public tk2dSpriteAnimationClip left;
+    //public tk2dSpriteAnimationClip right;
+
+    private tk2dSpriteAnimator anim; 
+
+
+    //public Sprite facingLeft;
+    //public Sprite facingRight;
     int direction; 
 
     int timer = 0;
 
     // Use this for initialization
     void Start () {
-
+        anim = GetComponent<tk2dSpriteAnimator>(); 
        direction = Random.Range(0, 2); 
 	
 	}
@@ -25,8 +31,8 @@ public class flyingBat : MonoBehaviour {
     {
         if (direction == 0) {
 
-            this.GetComponent<SpriteRenderer>().sprite = facingLeft;
-
+            //this.GetComponent<SpriteRenderer>().sprite = facingLeft;
+            anim.Play("genericflyingbat_left"); 
             timer++;
             if (timer >= 120)
             {
@@ -39,7 +45,8 @@ public class flyingBat : MonoBehaviour {
 
         if (direction > 0) {
 
-            this.GetComponent<SpriteRenderer>().sprite = facingRight;
+            //this.GetComponent<SpriteRenderer>().sprite = facingRight;
+            anim.Play("genericflyingbat_right"); 
 
             timer++;
             if (timer >= 120)

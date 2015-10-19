@@ -240,6 +240,32 @@ public class changelog : MonoBehaviour {
 
     Yay progress! Going to show it off to people at the showcase tonight and get some more opinions on it. 
 
+    10/13/15:
+
+    changes made:
+
+    tweaked the follow camera's values and the enemy spawner's values to try and get a more balanced feel to it. 
+
+    made a skeleton sprite and figured out how to animate it!
+
+    have a basic understanding of how to animate the sprites in unity using tk2d toolkit tools
+
+    animated the scary mask enemy
+
+    10/19/15: 
+
+    changes made: 
+
+    animated the bomb enemy
+
+    finished animating the two states of the flying bat enemy. 
+
+    added a really cool dramatic camera that pans into the player to first show the lava that is chasing them and than closes in to allow for better visibility.
+
+
+
+
+
 
 
 
