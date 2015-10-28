@@ -17,7 +17,8 @@ public class playerControls : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-
+        
+        
 
 		rb = GetComponent<Rigidbody2D>(); 
 	

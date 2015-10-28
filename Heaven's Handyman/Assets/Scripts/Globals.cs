@@ -14,6 +14,8 @@ public class Globals : MonoBehaviour {
     public static float distanceTraveledX;
     public static float distanceTraveledY; 
 
+    
+
 
 
     // Use this for initialization

@@ -29,7 +29,7 @@ public class scaryMask : MonoBehaviour {
         {
             var dir = target.transform.position - transform.position;
             dir = dir.normalized; 
-            this.GetComponent<Rigidbody2D>().AddForce(dir * 480 * Time.deltaTime);
+            this.GetComponent<Rigidbody2D>().AddForce(dir * 330 * Time.deltaTime);
 
         }
 

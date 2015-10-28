@@ -14,8 +14,9 @@ public class UIManager : MonoBehaviour {
 
     public GameObject player; 
 
-    int timer = 0; 
+    int timer = 0;
 
+    //public ScoreView View; 
    
     
     
@@ -52,6 +53,7 @@ public class UIManager : MonoBehaviour {
 
         if (Globals.death == true) {
 
+            //View.CheckScore(); 
             DeathScreen(); 
 
         }
@@ -96,7 +98,11 @@ public class UIManager : MonoBehaviour {
         Globals.death = false;
 
         //forces the score to reset when switching between scenes
-        Globals.score = 0; 
+        Globals.score = 0;
+
+        //resets the values for the music playing
+        Globals.heaven = false;
+        Globals.hell = false; 
 
 	}
 

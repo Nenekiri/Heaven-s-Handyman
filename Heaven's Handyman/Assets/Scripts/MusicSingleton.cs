@@ -57,7 +57,9 @@ public class MusicSingleton : MonoBehaviour {
 				
 			s.Play ();
 				
-		} else if (Globals.hell == true) {
+		    }
+
+        if (Globals.hell == true) {
 				
 			s = GetComponent<AudioSource> ();
 				
@@ -65,7 +67,7 @@ public class MusicSingleton : MonoBehaviour {
 				
 			s.Play ();
 				
-		} 
+		    } 
 
 			
 
@@ -76,8 +78,9 @@ public class MusicSingleton : MonoBehaviour {
 	void Update(){
 
 		//as long as I put Menu in the name of the level this should fix the problem for those menus as well
-		if(Application.loadedLevelName.Contains("Menu")){
-			s.enabled = false; }
+		if(Application.loadedLevelName.Contains("Menu")){ 
+			s.enabled = false;
+            RandomMusic();            }
 		else{
 			s.enabled = true; 
 
@@ -85,7 +88,9 @@ public class MusicSingleton : MonoBehaviour {
 		}
 
 
-	}
+	}//end of update
+
+  
 
 
 

@@ -262,6 +262,23 @@ public class changelog : MonoBehaviour {
 
     added a really cool dramatic camera that pans into the player to first show the lava that is chasing them and than closes in to allow for better visibility.
 
+    10/28/15: 
+
+    other projects keep getting in the way of getting stuff done on this project
+
+    changes made: 
+
+    fixed it so that the player cannot make it past the walls that are on both the left and right sides
+    
+    added updated visual for the handyman
+
+    started to try and get the database commands to work 
+
+    fixed the problem I had with getting the music to properly randomize itself after selecting a new type after hitting the back button
+
+    Fixed up the main menu screen to look a little better than before: added some sprite buttons and resized the text
+
+
 
 
 
