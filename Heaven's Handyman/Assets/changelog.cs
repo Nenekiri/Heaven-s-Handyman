@@ -278,7 +278,21 @@ public class changelog : MonoBehaviour {
 
     Fixed up the main menu screen to look a little better than before: added some sprite buttons and resized the text
 
+    11/2/15: 
 
+    fixed the interation with breaker in that the message only pops up when the player is colliding with the breaker now. 
+
+    added the wing-flapping animation for both the left and right facing sides. 
+    
+    added the walking animation for both the left and right facing sides when colliding with a platform. 
+    
+    made some new blocks and imported them into the game. Will work on getting them to function as the new platforms next. 
+    
+     
+
+
+    
+     
 
 
 

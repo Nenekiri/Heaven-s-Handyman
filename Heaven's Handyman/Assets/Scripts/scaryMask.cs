@@ -11,7 +11,7 @@ public class scaryMask : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        target = GameObject.Find("test_player_2"); 
+        target = GameObject.Find("test_player_3"); 
 	
 	}
 	

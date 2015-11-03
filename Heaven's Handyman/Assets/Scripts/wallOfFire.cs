@@ -18,7 +18,7 @@ public class wallOfFire : MonoBehaviour {
 
         //rb = GetComponent<Rigidbody2D>();
 
-        target = GameObject.Find("test_player_2");
+        target = GameObject.Find("test_player_3");
 
     }
 

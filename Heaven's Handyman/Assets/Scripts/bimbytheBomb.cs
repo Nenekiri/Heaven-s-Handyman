@@ -20,7 +20,7 @@ public class bimbytheBomb : MonoBehaviour {
     void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		audios = GetComponent<AudioSource>();
-        target = GameObject.Find("test_player_2");
+        target = GameObject.Find("test_player_3");
         anim = GetComponent<tk2dSpriteAnimator>(); 
     }
 	

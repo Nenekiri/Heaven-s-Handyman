@@ -13,40 +13,54 @@ public class playerControls : MonoBehaviour {
 
 	public Rigidbody2D rb;
 
-    
-	// Use this for initialization
-	void Start () {
-
-        
-        
-
-		rb = GetComponent<Rigidbody2D>(); 
-	
-	}
+    private tk2dSpriteAnimator anim;
 
 
-	void FixedUpdate(){
+    // Use this for initialization
+    void Start () {
+
+         
+
+
+    rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<tk2dSpriteAnimator>();
+    }
+
+
+    void FixedUpdate() {
 
         //updates the position of the player
         Globals.distanceTraveledX = transform.localPosition.x;
-        Globals.distanceTraveledY = transform.localPosition.y; 
-		//checks for the position of the player in the y-axis and will "kill" the player 
-		//when he goes past the y-position of the wall of death. 
-		if (this.transform.position.y <= wall.transform.position.y){
+        Globals.distanceTraveledY = transform.localPosition.y;
+        //checks for the position of the player in the y-axis and will "kill" the player 
+        //when he goes past the y-position of the wall of death. 
+        if (this.transform.position.y <= wall.transform.position.y) {
 
             //Application.LoadLevel("Test"); 
 
-            Globals.death = true; 
+            Globals.death = true;
 
-		}
+        }
 
-		//basic movement for the character
-		
-		//this method allows for movement both on the horizontal and vertical axis
-		//var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-		
-		//this method only allows horizontal movement
-		Vector2 move = new Vector2(Input.GetAxis("Horizontal"), 0);
+        //basic movement for the character
+
+        //this method allows for movement both on the horizontal and vertical axis
+        //var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+
+        //this method only allows horizontal movement
+        Vector2 move = new Vector2(Input.GetAxis("Horizontal"), 0);
+
+        /*if (Input.GetButtonUp("Jump") == false) { 
+        //play the animations for walking
+        if (move.x < 0)
+        {
+            anim.Play("handyman_walkleft");
+        }
+        else if (move.x > 0) {
+            anim.Play("handyman_walk");
+        }
+    }//end of walking check */
+        
 		//transform.position += move * speed * Time.deltaTime;
 		
 		float grav = rb.velocity.y - 0.25f; 
@@ -77,11 +91,19 @@ public class playerControls : MonoBehaviour {
 
 		if(Input.GetButtonDown("Jump") == true){
 
-			grav = 10.5f; 
+			grav = 10.5f;
 
+            //switching the animation based on the input from the player
+            if (move.x < 0)
+            {
+                anim.Play("handyman_wingflapleft"); 
+            }
+            else if (move.x > 0)
+            {
+                anim.Play("handyman_wingflap");
+            }
 
-
-		}
+        }
 		
 		rb.velocity = new Vector2(rb.velocity.x, grav); 
 		
@@ -125,6 +147,29 @@ public class playerControls : MonoBehaviour {
             Globals.death = true;     
          
 		}
-	}
+
+
+	}//end of OnTriggerEnter2D
+
+    void OnCollisionStay2D(Collision2D col) {
+
+        if (col.gameObject.tag == "Platform")
+        {
+
+            Vector2 move2 = new Vector2(Input.GetAxis("Horizontal"), 0);
+
+            //play the animations for walking
+            if (move2.x < 0)
+            {
+                anim.Play("handyman_walkleft");
+            }
+            else if (move2.x > 0)
+            {
+                anim.Play("handyman_walk");
+            }
+        }
+    }
+
+    
 
 }//end of class

@@ -31,8 +31,8 @@ public class Breakers : MonoBehaviour {
     void Start () {
         rb = GetComponent<Rigidbody2D>();
         interact = false;
-       
-        
+        breakerDisplay.SetActive(false);
+
     }
 	
 	// Update is called once per frame
@@ -75,12 +75,11 @@ public class Breakers : MonoBehaviour {
         Debug.Log("Hit Breaker");
         if (coli.gameObject.tag == "Player")
         {
-            if (interact == false)
-            {
-                //display a message over the breaker object that signals the player needs to interact with it
-                //breakerDisplay.SetActive(true);
-            }
            
+                //display a message over the breaker object that signals the player needs to interact with it
+                breakerDisplay.SetActive(true);
+            
+                           
 
 
                 //changed it to a type of quick time event that checks for the amount of button presses that player has done while next to the button and if the limit is 
@@ -93,7 +92,9 @@ public class Breakers : MonoBehaviour {
                     this.GetComponent<SpriteRenderer>().sprite = breakerOn;
                     checkScore();
 
-                    interact = true; 
+                    interact = true;
+
+                    Globals.message = true; 
 
                     
 
@@ -111,7 +112,8 @@ public class Breakers : MonoBehaviour {
 
         if (coli.gameObject.tag == "Player") {
 
-            //breakerDisplay.SetActive(false); 
+            breakerDisplay.SetActive(false);
+            Globals.message = false;  
         }
 
     }//end of OnCollisionExit2D
