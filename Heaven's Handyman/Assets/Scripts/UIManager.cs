@@ -114,6 +114,8 @@ public class UIManager : MonoBehaviour {
         //forces the score to reset when switching between scenes
         Globals.score = 0;
 
+        Globals.scoreSubmit = false; 
+
         //resets the values for the music playing
         Globals.heaven = false;
         Globals.hell = false; 
@@ -165,7 +167,9 @@ public class UIManager : MonoBehaviour {
         //resets the variable for the score
         Globals.score = 0;
 
-        timer = 0; 
+        timer = 0;
+
+        Globals.scoreSubmit = false; 
 
 
     }//end of reload method

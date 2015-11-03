@@ -10,7 +10,9 @@ public class Globals : MonoBehaviour {
     public static int highscore = 0; 
 
     public static bool death = false;
-    public static bool message = false; 
+    public static bool message = false;
+
+    public static bool scoreSubmit = false; 
 
     public static float distanceTraveledX;
     public static float distanceTraveledY; 

@@ -280,6 +280,8 @@ public class changelog : MonoBehaviour {
 
     11/2/15: 
 
+    changes made:
+
     fixed the interation with breaker in that the message only pops up when the player is colliding with the breaker now. 
 
     added the wing-flapping animation for both the left and right facing sides. 
@@ -294,6 +296,17 @@ public class changelog : MonoBehaviour {
     
     added the wing flap sound effect to the player so that the wings sound like they are moving now. 
     
+    11/3/15: 
+
+    changes made: 
+
+    fixed the bug that I had with not getting the breakers to work on the new platforms
+
+    added a multitude of new platforms that are derived from the newly imported sprites of: stone, tile, vine stone, metal, brick, and cloud. 
+
+    each set of platforms is slightly different and has something that makes it unique
+
+
      
 
 

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using System.Net;
 
 public class ScoreView : MonoBehaviour {
 
@@ -35,19 +36,29 @@ public class ScoreView : MonoBehaviour {
 
     IEnumerator Submit()
     {
+        string score = PlayerPrefs.GetInt("highscore").ToString();
 
+        WebClient w = new WebClient();
+
+        string r = w.DownloadString("http://cit351.nenekiri.com/scores.php?high=" + score); 
         
-        WWW www = new WWW("http://www.cit351nenekiri.com/scores.php?high=" + PlayerPrefs.GetInt("highscore"));
-        yield return www;
+        //WWW www = new WWW("http://cit351.nenekiri.com/scores.php?high=" + score);
+       // yield return www;
 
-        string result = www.text;
+       // string result = www.text;
+
+        Debug.Log("this shit ran!");
+        Debug.Log("http://cit351.nenekiri.com/scores.php?high=" + score);
+
+        yield return null; 
+         
 
     }
 
     IEnumerator GetScores()
     {
 
-        WWW www = new WWW("http://www.cit351nenekiri.com/scores.php?high=get");
+        WWW www = new WWW("http://cit351.nenekiri.com/scores.php?high=get");
         yield return www;
 
         string result = www.text;
@@ -69,6 +80,8 @@ public class ScoreView : MonoBehaviour {
 
         if (Globals.score == 0)
         {
+            //StartCoroutine(Submit());
+
             //print the score dynamically to the screen for the player to see. 
             text2.text = "Too Bad! You Didn't Save Anyone!";
         }
@@ -104,9 +117,10 @@ public class ScoreView : MonoBehaviour {
 
         Debug.Log(PlayerPrefs.GetInt("highscore") + " current highscore"); 
 
-        if (Globals.death == true)
+        if (Globals.death == true && Globals.scoreSubmit == false)
         {
             CheckScore();
+            Globals.scoreSubmit = true; 
         }
 
         
