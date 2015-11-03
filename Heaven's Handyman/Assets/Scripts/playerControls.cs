@@ -15,6 +15,9 @@ public class playerControls : MonoBehaviour {
 
     private tk2dSpriteAnimator anim;
 
+    public AudioSource audios;
+    public AudioClip wingflap;
+
 
     // Use this for initialization
     void Start () {
@@ -24,6 +27,7 @@ public class playerControls : MonoBehaviour {
 
     rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<tk2dSpriteAnimator>();
+        audios = GetComponent<AudioSource>(); 
     }
 
 
@@ -96,11 +100,13 @@ public class playerControls : MonoBehaviour {
             //switching the animation based on the input from the player
             if (move.x < 0)
             {
-                anim.Play("handyman_wingflapleft"); 
+                anim.Play("handyman_wingflapleft");
+                audios.PlayOneShot(wingflap, 1);
             }
             else if (move.x > 0)
             {
                 anim.Play("handyman_wingflap");
+                audios.PlayOneShot(wingflap, 1);
             }
 
         }

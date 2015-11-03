@@ -288,6 +288,12 @@ public class changelog : MonoBehaviour {
     
     made some new blocks and imported them into the game. Will work on getting them to function as the new platforms next. 
     
+    fixed the bug where the player could pause the game after the death screen was shown to them causing that weird overlay effect.
+    
+    started to add in the different block types, but ran into a spot of trouble with how the breakers were behaving. 
+    
+    added the wing flap sound effect to the player so that the wings sound like they are moving now. 
+    
      
 
 

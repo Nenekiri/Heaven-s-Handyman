@@ -41,15 +41,22 @@ public class UIManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
 		if (isPaused) {
 			PauseGame (true); 
 		} else {
 			PauseGame(false); 
 		}
 
-		if(Input.GetButtonDown ("Cancel")){
-			SwitchPause(); 
-		}
+        //checks to make sure the player isn't dead before pausing
+        if (Globals.death == false)
+        {
+            if (Input.GetButtonDown("Cancel"))
+            {
+                SwitchPause();
+            }
+        }
 
         if (Globals.death == true) {
 
@@ -80,12 +87,19 @@ public class UIManager : MonoBehaviour {
 
 	public void SwitchPause(){
 
-		if (isPaused) {
+        if (Globals.death == false)
+        {
+            if (isPaused)
+            {
 
-			isPaused = false; //changes the value
-		} else {
-			isPaused = true; 
-		}
+                isPaused = false; //changes the value
+            }
+            else
+            {
+                isPaused = true;
+            }
+
+        }
 
 
 	}//end of switchPause method
