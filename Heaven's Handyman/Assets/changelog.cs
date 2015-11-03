@@ -306,6 +306,10 @@ public class changelog : MonoBehaviour {
 
     each set of platforms is slightly different and has something that makes it unique
 
+    Charles gave me a set of images which I have used to make the lava move around and animate
+    
+    fixed the database and the script in unity! Now it will only add the highscore when the player has surpassed the old highscore.  
+
 
      
 
