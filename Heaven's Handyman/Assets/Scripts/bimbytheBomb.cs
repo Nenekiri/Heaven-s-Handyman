@@ -5,7 +5,9 @@ public class bimbytheBomb : MonoBehaviour {
 
 	public Rigidbody2D rb;
 	public AudioSource audios; 
-	public AudioClip beep; 
+	public AudioClip beep;
+
+    public AudioClip explosion; 
 
 	public float distance; 
 	public GameObject target;
@@ -46,10 +48,16 @@ public class bimbytheBomb : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D c){
 
 		
-		if(distance < 50){
+		if(distance < 50 && c.gameObject.tag != "Player"){
 			audios.PlayOneShot(beep, 1);}
 
-	}
+        if (c.gameObject.tag == "Player")
+        {
+            audios.PlayOneShot(explosion, 1);
+
+        }
+
+    }
 
 	//a way to check for the collsion using rigidbody that is woken up every frame
 	void OnCollisionStay2D(Collision2D coli){
@@ -62,6 +70,8 @@ public class bimbytheBomb : MonoBehaviour {
             Globals.death = true;
         }
 	}
+
+
 
   
 

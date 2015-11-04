@@ -17,6 +17,7 @@ public class playerControls : MonoBehaviour {
 
     public AudioSource audios;
     public AudioClip wingflap;
+    
 
 
     // Use this for initialization
@@ -173,9 +174,13 @@ public class playerControls : MonoBehaviour {
             {
                 anim.Play("handyman_walk");
             }
-        }
-    }
+        }//end of the walking cycle if
 
-    
+        
+
+    }//end of OnCollisionStay2D
+
+  
+
 
 }//end of class

@@ -13,12 +13,15 @@ public class wallOfFire : MonoBehaviour {
     public float distance;
     public GameObject target;
 
+    public AudioSource a; 
+
     // Use this for initialization
     void Start () {
 
         //rb = GetComponent<Rigidbody2D>();
 
         target = GameObject.Find("test_player_3");
+        a = GetComponent<AudioSource>(); 
 
     }
 
@@ -43,6 +46,17 @@ public class wallOfFire : MonoBehaviour {
             transform.Translate(speedUp);  
 
         }
+
+        if (distance < 30)
+        {
+
+            a.volume = 0.25f; 
+
+        }
+
+        else if (distance > 30) {
+            a.volume = 0.03f; 
+        } 
         
 
 

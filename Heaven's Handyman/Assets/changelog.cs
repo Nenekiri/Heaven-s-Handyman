@@ -308,7 +308,34 @@ public class changelog : MonoBehaviour {
 
     Charles gave me a set of images which I have used to make the lava move around and animate
     
-    fixed the database and the script in unity! Now it will only add the highscore when the player has surpassed the old highscore.  
+    fixed the database and the script in unity! Now it will only add the highscore when the player has surpassed the old highscore. 
+    
+    11/4/15:
+    
+    changes made: 
+    
+    added in an explosion sound effect for when bimby collides with the player. 
+    
+    added in a lava soundtrack that plays louder when the player gets closer to it and plays softer when the player gets farther away
+    
+    learned about the shadow component in unity today. Started applying that to a bunch of my buttons. 
+    
+    Also learned about the outline component that can also be used with the unity UI components, but I probably won't be using that one. 
+    
+    spruced up the Main Menu screen with a bunch of shadow effects. 
+
+    added a basic skybox to the main menu scene to make it look more interesting. 
+
+    Changed the title text to the font Atlantic Mail to make it look fancier. 
+
+    updated the credits with more information for the sound effect and the background
+
+    changed the barrier for each side to be a construction sign and made it work on either side again. 
+
+    adjusted the volume on some music tracks and sound effect tracks so that they were not as loud. 
+
+    
+     
 
 
      
