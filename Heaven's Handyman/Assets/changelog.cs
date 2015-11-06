@@ -357,6 +357,14 @@ public class changelog : MonoBehaviour {
 
     The three power-ups are halo, swift, and feather
 
+    11/6/15:
+
+    changes made: 
+
+    fixed it so that the sound effect for the explosion will not play when the player collides with bimby whilst they have the halo powerup
+
+    added in logic to the enemy spawner to allow it to make more enemies appear on screen the longer that time goes on. 
+
 
 
 

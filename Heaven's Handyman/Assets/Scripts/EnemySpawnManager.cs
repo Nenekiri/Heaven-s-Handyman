@@ -17,8 +17,12 @@ public class EnemySpawnManager : MonoBehaviour {
     private Queue<GameObject> objectQueue;
     //private List<Transform> enemyList; 
 
+    public int enemyTimer = 0; 
+
     void Start()
     {
+
+        enemyTimer = 0; 
         objectQueue = new Queue<GameObject>(numberOfObjects);
        
         for (int i = 0; i < numberOfObjects; i++)
@@ -40,6 +44,15 @@ public class EnemySpawnManager : MonoBehaviour {
     void Update()
     {
         Debug.Log(objectQueue.Peek());
+
+        if (numberOfObjects < 5)
+        {
+            enemyTimer++;
+        }
+        else {
+            enemyTimer = 0; 
+        }
+
 
         if (objectQueue.Peek() == null)
         {
@@ -65,6 +78,12 @@ public class EnemySpawnManager : MonoBehaviour {
         {
 
             Recycle();
+        }
+
+        if (enemyTimer >= 2100) {
+            enemyTimer = 0;
+            numberOfObjects++; 
+
         }
 
     }//end of update

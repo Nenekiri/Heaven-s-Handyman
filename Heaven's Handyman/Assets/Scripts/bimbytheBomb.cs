@@ -51,7 +51,7 @@ public class bimbytheBomb : MonoBehaviour {
 		if(distance < 50 && c.gameObject.tag != "Player"){
 			audios.PlayOneShot(beep, 1);}
 
-        if (c.gameObject.tag == "Player")
+        if (c.gameObject.tag == "Player" && Globals.haloBool == false)
         {
             audios.PlayOneShot(explosion, 1);
 
