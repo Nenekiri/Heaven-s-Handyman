@@ -32,7 +32,9 @@ public class flyingBat : MonoBehaviour {
         if (direction == 0) {
 
             //this.GetComponent<SpriteRenderer>().sprite = facingLeft;
-            anim.Play("genericflyingbat_left"); 
+            anim.Play("genericflyingbat_left");
+
+
             timer++;
             if (timer >= 120)
             {
@@ -46,7 +48,8 @@ public class flyingBat : MonoBehaviour {
         if (direction > 0) {
 
             //this.GetComponent<SpriteRenderer>().sprite = facingRight;
-            anim.Play("genericflyingbat_right"); 
+            anim.Play("genericflyingbat_right");
+           
 
             timer++;
             if (timer >= 120)
@@ -68,7 +71,7 @@ public class flyingBat : MonoBehaviour {
     {
 
         Debug.Log("Hit Player");
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player" && Globals.haloBool == false)
         {
 
             //Application.LoadLevel("Test");

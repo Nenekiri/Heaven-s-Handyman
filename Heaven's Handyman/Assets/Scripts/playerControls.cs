@@ -17,6 +17,22 @@ public class playerControls : MonoBehaviour {
 
     public AudioSource audios;
     public AudioClip wingflap;
+
+    public int swiftPowerupTimer = 0;
+    public bool swiftBool = false;
+
+    public GameObject bootImage;
+
+    public int haloPowerupTimer = 0;
+    public GameObject haloImage;
+
+    public int featherPowerupTimer = 0;
+    public bool featherBool = false;
+    public GameObject featherImage;
+
+    public AudioClip featherSound;
+    public AudioClip swiftSound;
+    public AudioClip haloSound; 
     
 
 
@@ -28,7 +44,19 @@ public class playerControls : MonoBehaviour {
 
     rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<tk2dSpriteAnimator>();
-        audios = GetComponent<AudioSource>(); 
+        audios = GetComponent<AudioSource>();
+        bootImage = GameObject.Find("Boot Image");
+        bootImage.SetActive(false);
+
+        haloImage = GameObject.Find("Halo Image");
+        haloImage.SetActive(false);
+
+        featherImage = GameObject.Find("Feather Image");
+        featherImage.SetActive(false);
+
+        featherBool = false;
+        swiftBool = false;
+        Globals.haloBool = false; 
     }
 
 
@@ -44,6 +72,47 @@ public class playerControls : MonoBehaviour {
             //Application.LoadLevel("Test"); 
 
             Globals.death = true;
+
+        }
+
+        //powerup logic section
+        if (swiftBool == true) {
+
+            swiftPowerupTimer++; 
+        }
+
+        if (swiftPowerupTimer >= 600) {
+            swiftBool = false; 
+            swiftPowerupTimer = 0;
+            speed = 6.0f;
+            bootImage.SetActive(false); 
+        }
+
+        if (featherBool == true)
+        {
+
+            featherPowerupTimer++;
+        }
+
+        if (featherPowerupTimer >= 600)
+        {
+            featherBool = false;
+            featherPowerupTimer = 0;
+            JumpSpeed = 11.0f;
+            fallSpeed = 8.0f; 
+            featherImage.SetActive(false);
+        }
+
+        if (Globals.haloBool == true) {
+
+            haloPowerupTimer++; 
+        }
+
+        if (haloPowerupTimer >= 600) {
+
+            Globals.haloBool = false;
+            haloPowerupTimer = 0;
+            haloImage.SetActive(false); 
 
         }
 
@@ -127,6 +196,8 @@ public class playerControls : MonoBehaviour {
 
 			//Debug.Log(fallSpeed); 
 		}
+
+        Debug.Log("swift power up time:" + swiftPowerupTimer);
 		
 		//much less effective way of dropping the character
 		//var moveDown = new Vector3(0, Input.GetAxis("Vertical"), 0); 
@@ -155,8 +226,73 @@ public class playerControls : MonoBehaviour {
          
 		}
 
+        if (other.tag == "halo powerup") {
 
-	}//end of OnTriggerEnter2D
+            //resets the counter so that if the player comes in contact with another one, the time increases
+            haloPowerupTimer = 0;
+
+            //play the sound effect
+            audios.PlayOneShot(haloSound, 1);
+
+
+            //destroy the powerup
+            Destroy(other.gameObject);
+
+            //start the timer
+            Globals.haloBool = true;
+
+            haloImage.SetActive(true);
+
+
+        }
+
+        if (other.tag == "swift powerup") {
+            //resets the counter so that if the player comes in contact with another one, the time increases
+            swiftPowerupTimer = 0;
+
+            //play the sound effect
+            audios.PlayOneShot(swiftSound, 1);
+
+            //destroy the powerup
+            Destroy(other.gameObject);
+
+            //adjust the player's speed
+            speed = 10.0f;
+
+            //start the timer
+            swiftBool = true;
+
+            bootImage.SetActive(true); 
+             
+        }
+
+        if (other.tag == "feather powerup")
+        {
+            //resets the counter so that if the player comes in contact with another one, the time increases
+            featherPowerupTimer = 0;
+
+            //play the sound effect
+            audios.PlayOneShot(featherSound, 1);
+
+
+            //destroy the powerup
+            Destroy(other.gameObject);
+
+            //adjust the player's jump speed
+            JumpSpeed = 14.0f;
+
+            //adjust the player's fall speed
+            fallSpeed = 5.0f; 
+
+            //start the timer
+            featherBool = true;
+
+            featherImage.SetActive(true);
+
+        }
+
+
+    }//end of OnTriggerEnter2D
 
     void OnCollisionStay2D(Collision2D col) {
 

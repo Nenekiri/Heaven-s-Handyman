@@ -44,7 +44,7 @@ public class floatingRamSkull : MonoBehaviour {
     {
 
         Debug.Log("Hit Player");
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player" && Globals.haloBool == false)
         {
 
             //Application.LoadLevel("Test");

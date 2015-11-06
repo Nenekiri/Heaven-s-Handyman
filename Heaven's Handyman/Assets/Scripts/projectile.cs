@@ -22,7 +22,7 @@ public class projectile : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		
 		Debug.Log ("Hit Player"); 
-		if (col.gameObject.tag == "Player"){
+		if (col.gameObject.tag == "Player" && Globals.haloBool == false){
 
             //Application.LoadLevel("Test");
 

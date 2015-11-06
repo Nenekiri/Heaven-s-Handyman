@@ -62,7 +62,7 @@ public class bimbytheBomb : MonoBehaviour {
 	//a way to check for the collsion using rigidbody that is woken up every frame
 	void OnCollisionStay2D(Collision2D coli){
 		Debug.Log ("Hit Bomb2");  
-		if(coli.gameObject.tag == "Player"){
+		if(coli.gameObject.tag == "Player" && Globals.haloBool == false){
 
             //on collison with the player, play the explosion animation and set the death variable to be true. 
             rb.isKinematic = true;  

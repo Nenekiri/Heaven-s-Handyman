@@ -334,6 +334,34 @@ public class changelog : MonoBehaviour {
 
     adjusted the volume on some music tracks and sound effect tracks so that they were not as loud. 
 
+    11/5/15:
+
+    changes made: 
+
+    fixed the box collider on the animated bat enemy so that it is closer to the enemy sprite than it was before. 
+
+    added proper credit to the youtube video that I ripped the lava soundtrack from. 
+
+    added new sprites for the powerup system that I will be trying to implement. 
+
+    added the swift boots powerup that allows the player to move quicker whilst on platforms for about ten seconds
+
+    also added a visual indicator to the hud to make the player aware of the current powerup that the player has.
+    (now added the visual indicator for each of the three power-ups) 
+
+    added the halo powerup that makes it so the player cannot take any damage from the enemies
+
+    added the feather powerup that makes it so the player slows their descent but increases their jump speed 
+
+    added the sound effects for picking up each of the powerups 
+
+    The three power-ups are halo, swift, and feather
+
+
+
+
+
+
     
      
 
