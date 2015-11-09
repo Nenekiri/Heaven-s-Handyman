@@ -279,7 +279,7 @@ public class playerControls : MonoBehaviour {
             Destroy(other.gameObject);
 
             //adjust the player's jump speed
-            JumpSpeed = 14.0f;
+            JumpSpeed = 16.0f;
 
             //adjust the player's fall speed
             fallSpeed = 5.0f; 

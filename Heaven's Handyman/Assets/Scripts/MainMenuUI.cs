@@ -7,7 +7,11 @@ public class MainMenuUI : MonoBehaviour {
 	public GameObject mainMenu; 
 
 	public Toggle MusicToggle; 
-	public Toggle MusicToggle2; 
+	public Toggle MusicToggle2;
+
+    public Toggle DramCam;
+    public Toggle LavaSounds;
+    public Toggle LavaSprite; 
 
 	// Use this for initialization
 	void Start () {
@@ -55,4 +59,40 @@ public class MainMenuUI : MonoBehaviour {
 
 
 	}
+
+    public void SwitchDramaticCamera()
+    {
+
+
+
+        if (DramCam.isOn)
+        {
+            Globals.dramCamBool = true;
+
+        }
+        else if (!DramCam.isOn) {
+            Globals.dramCamBool = false; 
+        }
+
+    }
+
+    public void SwitchLavaSounds()
+    {
+
+
+
+        if (LavaSounds.isOn)
+        {
+            Globals.lavaSound = true;
+
+        }
+        else if (!LavaSounds.isOn)
+        {
+            Globals.lavaSound = false;
+        }
+
+    }
+
+    
+
 }

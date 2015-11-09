@@ -17,7 +17,11 @@ public class Globals : MonoBehaviour {
     public static bool haloBool = false; 
 
     public static float distanceTraveledX;
-    public static float distanceTraveledY; 
+    public static float distanceTraveledY;
+
+    public static bool dramCamBool = false;
+    public static bool lavaSound = false;
+ 
 
     
 

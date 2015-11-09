@@ -8,7 +8,9 @@ public class wallOfFire : MonoBehaviour {
 	Vector3 wallSpeed = new Vector3(0, 0.08f, 0);
     Vector3 speedUp = new Vector3(0, 1.0f, 0);
 
-    public float timer = 0; 
+    public float timer = 0;
+
+    public tk2dSprite lavaSprite; 
 
 
 
@@ -49,16 +51,27 @@ public class wallOfFire : MonoBehaviour {
 
         }
 
-        if (distance < 30)
+       
+
+        if (Globals.lavaSound == true)
         {
 
-            a.volume = 0.25f; 
+            if (distance < 30)
+            {
 
+                a.volume = 0.45f;
+
+            }
+
+            else if (distance > 30)
+            {
+                a.volume = 0.15f;
+            }
         }
 
-        else if (distance > 30) {
-            a.volume = 0.03f; 
-        } 
+        else if (Globals.lavaSound == false) {
+            a.volume = 0.00f; 
+        }
         
 
 

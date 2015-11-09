@@ -371,7 +371,24 @@ public class changelog : MonoBehaviour {
 
     added a button that allows the player to view the high scores on the webpage I have set up for the database
 
+    added a preliminary splash screen image for the new build
 
+    added a new cursor that is the player's hammer and made it of type cursor
+
+    11/9/15:
+
+    fixed the splash screen image to contain the Title of the game
+
+    made a credits menu
+
+    made an options menu
+
+    added two different options in the options menu: one for enabling the dramatic camera and another for enabling the sounds that the lava 
+    makes. 
+
+    added more menu's that explain the story, give credits, and go over the controls for the game. 
+
+    
 
 
 

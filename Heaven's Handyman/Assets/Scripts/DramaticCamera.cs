@@ -7,15 +7,23 @@ public class DramaticCamera : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        dramacamera = GetComponent<Camera>();
-        dramacamera.fieldOfView = 154; 
+
+        if (Globals.dramCamBool == true)
+        {
+            dramacamera = GetComponent<Camera>();
+            dramacamera.fieldOfView = 154;
+        }
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
-        if (dramacamera.fieldOfView > 91) {
-            dramacamera.fieldOfView -= 0.2f; 
+        //check for the option of drama camera being turned on. 
+        if (Globals.dramCamBool == true)
+        {
+            if (dramacamera.fieldOfView > 91)
+            {
+                dramacamera.fieldOfView -= 0.2f;
+            }
         }
 	
 	}
