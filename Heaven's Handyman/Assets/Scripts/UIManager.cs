@@ -189,6 +189,11 @@ public class UIManager : MonoBehaviour {
 
     }
 
+   public void SeeScores()
+    {
+        Application.OpenURL("http:cit351.nenekiri.com/list.php");
+    }
+
 
 
 

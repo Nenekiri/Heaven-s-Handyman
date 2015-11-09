@@ -365,6 +365,12 @@ public class changelog : MonoBehaviour {
 
     added in logic to the enemy spawner to allow it to make more enemies appear on screen the longer that time goes on. 
 
+    11/8/15:
+
+    final stretch man, make it count!: 
+
+    added a button that allows the player to view the high scores on the webpage I have set up for the database
+
 
 
 
